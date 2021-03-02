@@ -1,0 +1,181 @@
+Aula 02
+
+Introdução
+Esta aula tem como bojetivo em apresentar a classe Activity, assim como,
+a Classe Intent e Intent Filters
+
+Objetivos
+Identificar os principais conceitos referentes à Activity Android, bem como 
+aplicá-la no desenvolvimento de uma aplicação simples
+
+Identificar os principais conceitos refrentes à Intent e Intent Filters e seu
+uso no desenvolvimento de uma aplicação simples
+
+
+Diretorio raiz do projeto de uma aplicação Android
+Pasta
+App
+Descrição
+Módulo app do projeto. Este módulo é padrão.
+
+Pasta
+build.gradle
+Descrição
+Arquivo de configuração do Gradle. Vale para todo projeto, incluindo todos
+os módulos
+
+Pasta
+gradle.properties
+Descrição
+Arquivo de propriedades para customizar o build Gradle
+
+Pasta
+gradlew.bat
+Descrição
+Script que executa o build do Gradle para complilar o projeto
+
+Pasta
+local.properties
+Descrição
+Arquivo com as configurações locais do projeto
+
+Pasta
+settings.gradle
+Descrição
+Arquivo de configuração do gradle que indica quais módulos devem ser compilados
+
+
+
+Arquivos do módulo app:
+Pasta
+build
+Descrição
+Local onde ficam os arquivos compilados do módulo
+
+Pasta
+R.java
+Descrição
+A classe R que é gerada automaticamente ao se compilar o projeto. Esta
+permite que a aplicação acesse qualquer recurso
+
+Pasta
+libs
+Descrição
+Onde devem ser inseridos os arquivos .jars a serem compilados com o
+projeto
+
+Pasta
+src/main/java
+Descrição
+Pasta que contém os arquivos Java
+
+Pasta
+src/main/res
+Descrição
+Pasta que contém os recursos da aplicação
+
+Pasta
+res/drawabla
+Descrição
+Pasta que contém as imagens da aplicação
+
+Pasta
+res/minimap
+Descrição
+Pasta que contém o ícone da aplicação
+
+Pasta
+res/layout
+Pasta que contém os arquivos XML de layouts para construir as telas de aplicação
+
+Pasta
+res/menu
+Descrição
+Pasta que contém os arquivos XML que criam os menus da aplicação, que são
+os botões com ações na action bar
+
+Pasta
+res/values
+Pasta que contém os arquivos XML utilizados para a intercionalização,
+configuração de temas e outras configurações
+
+
+Tipos de arquivos
+androidmanifest.xml
+*Um dos principais arquivos de sua aplicação
+*Nele que são descritas as informações essenciais para a execução de seu
+projeto como: nome do pacote utilizado, nome das Activities, permissões,
+versão mínima da API Android
+
+activty_main.xml
+*Esse é o nome default do arquivo
+*Podemos escolher qualquer outro nome
+*Aqui ficam definidas as configurações para criação do layout da tela
+
+strings.xml
+*Esse arquivo centraliza as mensagens de seu aplicativo.
+*Facilita a intercionalização do app
+
+classe R
+
+*Possui as referências para acessar os recursos de seu projeto
+*Gerada automaticamente pelo compilador. É recomendável que essa classe não seja alterada manualmente
+
+
+Activity
+*Similar ao JFrame do J2SE
+*Responsável por construir uma tela em Android, assim como tratar os eventos gerados por ela
+*Todo App deve implementar ao menos um Activity, podendo chamar outras Activities
+*O Android é responsável por gerencias o ciclo de vida dos Activities.
+*Para tanto, usa o conceito de pilha (Activity Stacks).
+*Toda Activity ao ser executada é inserida no topo da pilha.
+*A Activity anterior é parada e move-se para baixo da pilha
+*O Android pode encerrar as Activities caso necessite de recursos.
+
+
+Principais Métodos (funções do Objeto) do ciclo de vida Activity:
+*onCreate()
+É a primeira função executada quando a Activity é criada. Tem por responsabilidade
+carregar os layouts XML, inicializar os objetos, variáveis e outras operações de
+inicialização.
+
+*onStart()
+É executado antes da Activity ficar visível na tela do dispositivo, podendo
+ser chamado após os métodos onCreate() ou onRestart()
+
+*onResume()
+Representa o estado que a Activity está executando. É chamado logo após o evento
+onStart()
+
+*onRestart()
+É chamado imediatamente após ao método onStart(), quando uma Activity que estava
+parada volta ao foco
+
+*onPause()
+É chamado sempre que a tela de Activity fechar. Isto ocorre quando uma outra
+Activity (da sua aplicação ou não) ganhar o foco.
+
+*onStop()
+É chamado após o método onPause(), quando a Activity não está mais
+visível e está sendo encerrada
+
+*onDestroy()
+É chamado antes da Activity ser destruída e logo após será liberada a memória
+
+
+Os três níveis da vida da Activity
+1. Entire lifetime
+Ocorre desde a primeira chamada ao método onCreate() até a chamada do método
+onDestroy(), os quais são executados apenas uma única vez durante o ciclo de 
+vida da Activity
+
+2. Visible lifetime
+Ocorre entre uma chamada do método onStart() e a chamada correspondente do
+método onStop(). A Activity pode estar no topo da pilha (visível para o usuário)
+ou em segundo plano
+
+3. Foreground lifetime
+Ocorre entre uma chamada do método onResume() e a chamada correspondente do
+método onPause(). A Activity está no topo da pilha e interagindo com o usuário.
+
+
