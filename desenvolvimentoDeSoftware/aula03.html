@@ -1,0 +1,84 @@
+Objetivos
+*Explica a sintaxe Java para o Tratamento de Exceções
+*Demonstrar a Modelagem Comportamental no Java
+*Aplicar a biblioteca de Coleções Genéricas do Java
+
+Exceções
+Preparar o sistema para a possibilidade de ocorrência de erros durante a execução.
+
+Modelagem comportamental, no Java pode ser feito por meio de classes genéricas ou
+pelo uso de anotações, Java possui biblioteca para o manuseio de classes genéricas
+
+Temos a classe Genérica Exception, que define apenas um código de erro e uma mensagem
+voltada para erros genéricos
+
+Para tratarmos uma exceção devomos utilizar uma estrutura de fluxo específica, baseada
+no comando try
+
+try{
+//bloco
+}catch(IOException e1){
+//Tratamento de erro de IO
+}catch(Exception e2){
+//Tratamento de erro genérico
+}finally{
+//Execução obrigatória, independente da ocorrência de erros
+}
+
+
+Modelagem Comportamental
+Por exemplo, somos capazes de modelar um carro, mas, como modelaríamos um engarrafamento?
+
+Nesta situação não é objeto que define a abstração principal, mas, o comportamento
+
+Assim como uma fila, não importa seus objetos, mas, seu comportamento
+
+Filas e Pilhas são comportamentos
+
+
+Classes Genéricas
+
+Também são chamadas de classes template
+
+Quando criamos uma classe genérica estamos modelando um comportamento com lacunas bem definidas
+ao qual serão atribuídas classes para preencher tais lacunas e completar a funcionalidade
+abstara previamente definida
+
+
+Coleções
+As coleções são organizadas num grupo denominado de JCF (Java Collections Framework)
+
+Diferentemente de vetores, que possuem elementos fixo, as coleções funcionam internamente
+como listas encadeadas, e permitem que objetos sejam adicionas ou removidos a qualquer momento
+
+Em outras linguagens existe foreach, que deve ser lido "para cada elemento pertence à
+coleção"
+
+Fornece uma maneira de iterar sobre arrays.
+
+O Java faz através de Hashmap. Funcionalidade como se fosse uma tabela.
+
+Lembre-se, tem coisas que não podem ser modeladas como objetos.
+
+
+Reflexidade Computacional
+É a habilidade de um objeto conhecer a si próprio, sua estrutura e a utilização de seus
+métodos
+
+Em linguagem Java, os objetos derivam direta ou indiretamente da classe Object, é praticamente
+a classe base de toda plataforma.
+
+Também existe a classe Class, que permite observar a estrutura de qualquer objeto
+por meio da reflexividade.
+
+Através de Class podemos obter informações acerca dos atributos da classe em objetos
+do tipo Field e de seus métodos por meio de objetos Method e Paramenter
+
+
+Anotações
+As anotações são metadados anexados às classes que podem ser reconhecidas por ferramentas externas
+para as mais diversas finalidades. Atualmente, é comum seu uso em diversos frameworks,
+principalmente os de persistência de dados
+
+
+
