@@ -1,0 +1,114 @@
+Interfaces visuais para Desktop
+
+Interfaces gráficas bem construídas permitem ao usuário compreender mais rapidamente
+a funcionalidade de novos aplicativos. O Java fornece algumas bibliotecas capazes
+de facilitar o nosso trabalho como, por exemplo, awt e swing.
+
+Objetivos
+*Indentificar os conceitos relacionados às interfaces gráficas
+*Explicar o uso de componentes visuais e eventos em sistemas desktops
+*Usar os componentes swing para a criação de interfaces gráficas
+
+
+GUI(Graphical User Interface)
+WIMP (window, icon, menu, pointer) - ambiente gráfico composto de janelas, ícones, menus
+e ponteiros. Aqui utiliza-se um sistema com ponteiro (mouse) para controlar a posição
+do cursor e apresentar informações organizadas em janelas e representadas por meio
+de íncones.
+
+Desktop seria um ambiente onde existem essas janelas, a interação entre as mesmas 
+juntamente com outros elementos gráficos
+
+
+Bibliotecas Gráficas do Java
+awt(Abstract Window Toolkit) - trata-se da API original do Java para GUI
+swing - parte da JFC (Java Foundation Classes)
+swt (Standard Widget Tool) - criada pela IBM e mantida pela Eclipse Foundation
+
+Na biblioteca swing e awt temos componentes visuais como botões, campos de texto
+e listas, voltados para interação com o usuário, e componentes chamados de
+contêiners, responsáveis por agrupar os componentes iniciais.
+
+O principal contêiner é a Janela
+
+Um contêiner é um componente que pode ter outros componentes dentro deles
+
+
+Alguns tipos de layouts disponíveis
+Border Layout - Aceita até cinco componentes, os quais devem ser posicionados em
+North, South, West, East e Center
+Box Layout - Coloca os componentes em uma linha ou coluna simples, podendo ser alinhados
+Card Layout - Controlado por uma lista drop-down, permite exibir painéis de componentes
+de forma alternada
+Flow Layout - Apenas coloca os componentes sequencialmente em uma linha, mas serve como base
+aos painéis de Card Layout
+GridBagLayout - Sofisticado e complexo, divide o layout em um grid e permite mesclar
+células e adicionar espaços para o posicionamento dos componentes
+GridLayout - Trabalha com um grid simples, e os componentes vão preenchendo sequencialmente
+os espaços definidos
+
+Podemos definir as caixas de diálogo com JDialog e utilizar alguns diálogos
+padronizados com JOptionPane.
+
+Utilizamos as caixas de diálogo nas situações em que devemos fazer uma pergunta ao usuário,
+ou quando precisamos informá-lo sobre algo
+
+Alguns métodos do JOptionPane
+
+showConfirmDialog - Diálogo no estilo "Sim/ Não/ Cancelar"
+showInputDialog - Solicitação de dados do usuário
+showMessageDialog - Exibe uma mensagem ao usuário
+showOptionDialog - Unificação dos outros três tipos anteriores
+
+Componentes Visuais
+Botões - Interação com o usuário a partir da operação de clique do mouse
+Caixa de texto - Digitação de valores pelo usuário
+Elementos selecionáveis - Podem ser marcados ou desmarcados com o clique do mouse
+Listas - Representação de conjunto de dados, podendo ser retráteis ou não
+Menus - Conjunto de listas de ações agrupadas, localizadas normalmente na parte
+superior da tela
+
+
+Alguns componetes do swing
+JLabel - Representa um testo estático, podendo aceitar imagens (icon)
+JTextField - Campo de entrada de texto 
+JButton - Representa um botão tradicional
+JToggleButton - É um botão selecionavel, estilo on/off
+JProgressBar - Barra de progresso, muito utilizada para acompanhamento de tarefas demoradas
+JRadioButton - Deve ser usada para opções mutualmente exclusivas, isto é, quando somente
+uma opção pode ser escolhida
+JCheckedBox - Utilizado para situações em que podemos escolher mais de uma opção
+JTable - Representação de dados de forma tabular, como em uma planilha
+JTree - Representação de dados em forma hierárquica, ou seja, em árvore
+JComboBox - Conhecida como caixa de combinação, este componente é uma lista drop-down
+(retrátil)
+JList - Representa uma lista de valores 
+
+Utilização de Eventos
+Definição de eventos é uma ação predeterminada que, ao ocorrer, permite iniciar uma ação
+personalizada
+
+Alguns tipos de eventos disponíveis
+Listener - Action Listener
+Métodos - actionPerformed
+Parâmetro - ActionEvent
+
+Listener - Focus Listener
+Métodos - focusGained, focusLost
+Parâmetro - FocusEvent
+
+Listener - KeyListener
+Métodos - keyPressed, keyReleased, keyTyped
+Parâmetro - KeyEvent
+
+Listener - MouseListener
+Métodos - mouseClicked, mouseEntered, mouseExited, mousePressed, mouseReleased
+Parâmetro - MouseEvent
+
+Listener - MouseMotionListener
+Métodos - mouseDragged, mouseMoved
+Parâmetro - MouseEvent
+
+Listener - TextListener
+Métodos - textValueChanged
+Parâmetro - TextEvent
