@@ -1,0 +1,149 @@
+Interfaces Visuais para Web
+
+Objetivos
+*Identificar os componetes de uma interface Web
+*Explicar o uso de tecnologias cliente (HTML/CSS/JavaScript)
+*Empregar as tecnologias cliente para a criação de interfaces web
+
+HTML
+1. Foi formalizada em 1991 através das propostas de Tim Berners-Lee.
+2. Significa Hypertext Markup Language
+3. Passou a ser mantida pela W3C em 1996 e HTML 4.01 publicada em 1999
+4. Em 2000, a W3C recomenda a nova expecificação XHTML
+5. Em 2008 surge HTML5, oficializada em 2014, sua principal característica é
+um novo mecanismo de extensibilidade que permite combinarsintaxes baseadas em
+XML dentro de uma mesma página
+
+HTML 5 é baseada em tags que devem controlar diversos aspectos do texto. No HTML 5
+a preocupação é apenas estrutural, sendo delegado ao CSS o controle de características
+tipográficas
+
+A primeira linha do HTML define o tipo de documento !DOCTYPE html
+
+Depois definimos o cabeçalho e o corpo
+
+No cabeçalho encontram-se as informações de pré-carga, enquanto no corpo será colocada
+a parte visual
+
+tags comuns
+title
+Define o título da página, normalmente apresentado no topo da janela
+meta
+Permite a inclusão de informações e controle de características do documento, como o
+uso de UTF-8 para acentuação da língua portuguesa
+link
+Efetua a ligação da página com um recurso externo, como folha de estilo CSS ou uma
+biblioteca JS
+style
+Define uma folha de estilo interna para a página
+
+
+Algumas tags estruturais do body
+h1...
+Definem elementos de texto utilizados como títulos em diferentes tamanhos de fonte,
+sendo h1 para maior e h7 para o menos
+b, i, u, em, strong
+Negrito, itálico, etc... São consideradas obsoletas, sendo recomendado o uso de folhas
+de estilo CSS
+p, div
+Definem trechos de texto, sendo que p ressalta o parágrafo e div é muito utilizado para
+a criação de camadas
+ul, ol
+Iniciam a criação de listas de elementos, sendo numeradas com ol
+li
+Define um item de lista
+hr/
+Quebra de linha
+table, tr, td
+Utilizadas para a cria'ão de tabelas. Hoje em dia seu uso é recomendado apenas para
+dados tabulares
+span
+Define um trecho avulso, ao qual podem ser aplicadas formatações
+
+CSS
+1. CSS Cascade Style Sheets, a folha de estilo
+2. Sintaxe geral do CSS 
+	seletor{propriedade1:valor1;...;propriedadeN:valorN}
+3. Além de formatar as tags, é possível utilizar classes e identificadores como seletores
+do CSS, bastando colocar o sinal de hash na frente dos identificadores e ponto na frente das classes
+
+Quando devemos usar classes ou identificadores?
+Usamos identificadores em elementos que não se repetem, como camadas.
+As classes são utilizadas para utiliar a mesma formatação em diversos pontos da página
+
+
+JavaScript
+
+Usado de modo padrão
+
+Angular -  single page
+
+jQuerry - é uma biblioteca desenvolvida para simplificar os scripts executados no navegador
+do cliente
+
+Node - JS lado servidor
+
+Bootstrap - focado em responsividade 
+
+React / Ionic - voltados para Android
+
+Funções e eventos
+Em JS, criamos function com o uso de function, os par não são tipados, e elas podem
+retornar um resultado para o chamador com uso de return
+
+O conceito de eventos é o mesmo utilizado em desktop, isto é, um conjunto de ações
+predeterminadas para as quais podemos dar uma resposta programada ao chamador
+
+
+Formulários
+
+As informações do formu;ário são enviadas de duas formas, denomidas "métodos"
+*GET - Os dados são enviados através da própria URL
+*POST - Os dados são enviados em background
+
+Tag input pode utilizar os seguintes tipos
+text
+Cria uma caixa de texto, podendo ter um valor inicial definido através de value
+hidden
+QUando queremos guardar um valor para envio, mas sem ficar visível
+radio
+Opções mutuamente exclusivas. 
+checkbox
+Quando queremos a possibilidade de marcar várias opções
+submit
+Cria um botão de envio para o formulário
+reset
+Cria um botão que reinicia (limpa) o formulário
+
+Os dados de um formulário terá seus dados validados através de eventos e me'todos de acesso
+ao elementos HTML do JS, e a validação dependerá dos tipos de componente e informação
+considerados
+
+A forma mais aceita para o tratamento de elementos do HTML a partir do JS é através
+do uso de identificadores nas tags HTML, com instruções getElementByID, as quais seguem
+o formato abaixo
+
+var obj = document.getElementById(<<identificador>>)
+
+Alguns eventos
+onsubmit
+Efetua a validação do formulário imediatamente antes do envio para o servidor. Necessita
+o retorno booleano, indicando se os valores podem ser enviados ou não
+onclick
+Normalmente uma chamada explícita da validação. Bastante usado em botões de radio e
+caixas de marcação
+onchange
+Ocorre quando o valor (value) sofre uma alteração
+onfocus
+Ocorre quando o componente ganha o foco. Pode ser utilizado, por exemplo, para apagar
+o valor do campo
+onblur
+Ocorre na perda do foco pelo componente, é comum a aplicação de máscaras em valores
+numéricos como CEP e CPF
+onsearch
+Este evento é indicado quando um usuário digita algo em um campo de pesquisa
+(type="search")
+onselect
+Utilizado quando algum texto é selecionado no campo
+
+
